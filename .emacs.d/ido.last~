@@ -1,0 +1,50 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/Charizard/AppData/Roaming/.emacs.d/" . "customizations/")
+ ("c:/Users/Charizard/AppData/Roaming/" . ".emacs.d/")
+ ("c:/Users/Charizard/AppData/" . "Roaming/")
+ ("c:/Users/" . "Charizard/")
+ ("c:/Users/Charizard/Respitory/" . "C++/")
+ ("c:/Users/Charizard/" . "AppData/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "c:/Users/Charizard/AppData/Roaming/.emacs.d/customizations/"
+ "c:/Users/Charizard/Respitory/C++/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "ui.el"
+ "TestNewFile.cpp"
+ "TestNewFile"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/Charizard/AppData/Roaming/.emacs.d/customizations/" (21945 12767 0 0) "ui.el~" "ui.el" "shell-integration.el" "setup-js.el" "setup-clojure.el" "navigation.el" "misc.el" "elisp-editing.el" "editing.el" "../" "./")
+
+ ("c:/Users/Charizard/AppData/Roaming/.emacs.d/" (21945 12768 0 0) "themes/" "README.md" "places" "init.el" "ido.last~" "ido.last" "elpa/" "customizations/" "backups/" "auto-save-list/" ".smex-items" ".recentf~" ".recentf" ".gitignore" "../" "./")
+
+ ("c:/Users/Charizard/AppData/Roaming/" (21945 11212 0 0) "XBMC/" "WinRAR/" "vlc/" "Vertcoin/" "uTorrent/" "Unity/" "TuneUp Software/" "TS3Client/" "texstudio/" "SystemRequirementsLab/" "Sublime Text 3/" "Sublime Text 2/" "stetic/" "Spotify/" "SpeedRunnersLog.txt" "Sony Creative Software Inc/" "Sony/" "Skype/" "Samsung/" "RotMG.Production/" "raidcall/" "Quake3/" "Publish Providers/" "Primecoin/" "Personal/" "OpenOffice/" "NVIDIA/" "NuGet/" "Notepad++/" "Mumble/" "Mozilla/" "MonoDevelop-Unity-4.0/" "MKKE/" "mIRC/" "MiKTeX/" "Microsoft/" "Malwarebytes/" "Macromedia/" "LolClient/" "livestreamer/" "Litecoin/" "JetBrains/" "Intel/" "InstallShield/" "Identities/" "ICAClient/" "GitHub/" "FileZilla/" "Factorio/" "e-academy Inc/" "Dropbox/" "DAEMON Tools Lite/" "Curse/" "com.valve.FTP/" "codeblocks/" "Brother/" "Battle.net/" "BankID/" "AVG2014/" "Arrowhead/" "Apple Computer/" "Adobe PNG Format CS6 Prefs" "Adobe/" ".emacs.d/" "../" "./")
+
+ ("c:/Users/Charizard/AppData/" (21643 23901 0 0) "Roaming/" "LocalLow/" "Local/" "../" "./")
+
+ ("c:/Users/" (21643 24075 0 0) "UpdatusUser/" "Public/" "desktop.ini" "Default.migrated/" "Default User/" "Default/" "Charizard_2/" "Charizard/" "All Users/" "../" "./")
+
+ ("c:/Users/Charizard/Respitory/C++/" (21931 39811 0 0) "TutorialHandMade/" "Tutorial/" "Test/" "c++.sublime-workspace" "c++.sublime-project" "../" "./")
+
+ ("c:/Users/Charizard/" (21890 1125 0 0) "årebiljett.pdf" "XL/" "workspace/" "washing.pdf" "Videos/" "usb_driver/" "TurtleRace2/" "TurtleRace.pdf" "TurtleRace/" "Turtle3.pdf" "Turtle2.pdf" "Turtle.tex" "Turtle.synctex.gz" "Turtle.pdf" "Turtle.log" "Turtle.aux" "Turtle - Copy.pdf" "Tracing/" "Thumbs.db" "texput.log" "TestKlass.java" "test3.txt" "test.txt" "test.tex" "test.synctex.gz" "test.sublime-workspace" "Test.png" "test.pdf" "test.log" "test.aux" "Templates/" "stupidshit/" "Start Menu/" "SIte/" "SimWash.java" "SendTo/" "Searches/" "scan.txt" "Saved Games/" "Roaming/" "Respitory/" "Recent/" "README" "ptdc-workspace/" "PROGRAMMERING/" "PrintHood/" "powershell/" "Pictures/" "overtone-master/" "Nycklar/" "ntuser.ini" "NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "MK.Computer.Organization.and.Design.4th.Edition.Oct.2011.pdf" "MipsIt98/" "milkytracky/" "milkytracker-0.90.86-winnt.zip" "mean/" "mandelbrot.tex" "mandelbrot.synctex.gz" "mandelbrot.pdf" "mandelbrot.log" "mandelbrot.aux" "main.sublime-workspace" "main.sublime-project" "Local Settings/" "Links/" "Kiseijuu Sei no Kakuritsu (Parasyte) ED - It's The Right Time [Final] v3.mid" "kantharos/" "irssi/" "inl1-rapport.tex" "inl1-rapport.synctex.gz" "inl1-rapport.pdf" "inl1-rapport.log" "inl1-rapport.aux" "idé/" "g2mdlhlpx.exe" "Favorites/" "EMMABODA förfest.pdf" "EMMABODA 4dagar.pdf" "edaa01-workspace/" "EDA260 branch/" "EaselJS-release_v0.7.0/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "DatorTeknik/" "Copy of AndEngineExampelsLocal/" "Cookies/" "Contacts/" "CarWash.java" "bootstrap-3.3.2.zip" "bootstrap-3.3.2-dist.zip" "bin/" "BattleScribe/" "assembler.txt" "Application Data/" "AppData/" "AndroidStudioProjects/" "agent.log" ".wakatime.log" ".wakatime.db" ".wakatime.cfg" ".swt/" ".ssh/" ".settings/" ".scala_history" ".overtone/" ".m2/" ".lein/" ".kojo/" ".irssi/" ".idlerc/" ".gradle/" ".gitconfig" ".eclipse/" ".DS_Store" ".battlescribe/" "../" "./")
+
+ ("c:/Users/Charizard/Respitory/" (21932 51294 0 0) "Website/" "Scala/" "Python/" "Lua/" "Lisp/" "LightTable/" "Java/" "HashMapTests/" "Emacs/" "CodeJam/" "C++/" "BinarySearchTree/" "../" "./")
+
+ ("c:/Users/Charizard/Respitory/Emacs/" (21928 28105 0 0) "var/" "share/" "libexec/" "bin/" "../" "./")
+
+ ("c:/Users/Charizard/Respitory/Emacs/bin/" (21931 40087 0 0) "TUTORIAL.sv~" "TUTORIAL.sv" "runemacs.exe" "libXpm.dll" "grep-changelog" "foo" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-24.5.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
