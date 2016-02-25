@@ -523,6 +523,10 @@ local function bat_notification()
     local f_status = assert(io.open("/sys/class/power_supply/BAT0/status", "r"))
     local bat_capacity = tonumber(f_capacity:read("*all"))
     local bat_status = f_status:read("*all")
+    if(bat_capacity>100) then
+        bat_capactity=100;
+    end
+
     if(bat_status == "Discharging\n") then
         local green_hex,red_hex = dec_hex(bat_capacity),dec_hex(100-bat_capacity) 
         --naughty.notify({text="#"..red_hex..green_hex.."00"})
