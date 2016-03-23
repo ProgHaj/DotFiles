@@ -7,6 +7,7 @@ require("awful.autofocus")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
+local vicious = require("vicious")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -63,11 +64,11 @@ local layouts =
     awful.layout.suit.tile.top,
     awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.spiral,
-    --awful.layout.suit.spiral.dwindle,
-    --awful.layout.suit.max,
-    --awful.layout.suit.max.fullscreen,
-    --awful.layout.suit.magnifier,
+    awful.layout.suit.spiral,
+    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.max,
+    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.magnifier,
     awful.layout.suit.floating
 }
 -- }}}
@@ -84,7 +85,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
         names = {"system","hobby","work","extra","music","school","extra","extra","news"},
-        layout = {layouts[1],layouts[2],layouts[1],layouts[1],layouts[1],layouts[1],layouts[1],layouts[1],layouts[1]}
+        layout = {layouts[1],layouts[1],layouts[1],layouts[1],layouts[1],layouts[1],layouts[1],layouts[1],layouts[1]}
        }
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
@@ -101,6 +102,7 @@ myawesomemenu = {
    { "quit", awesome.quit }
 }
 
+
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "open terminal", terminal }
                                   }
@@ -114,6 +116,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- {{{ Wibox
+-- Network usage widget
+netwidget = wibox.widget.textbox()
+vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">D: ${wlp3s0 down_kb}</span> <span color="#7F9F7F">U: ${wlp3s0 up_kb}</span>', 3)
+
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 
@@ -197,6 +203,7 @@ for s = 1, screen.count() do
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     --right_layout:add(volume_widget)
+    right_layout:add(netwidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
