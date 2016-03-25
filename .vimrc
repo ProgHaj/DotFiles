@@ -19,6 +19,9 @@ Plugin 'nvie/vim-flake8'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/powerline',{'rtp':'powerline/bindings/vim/'}
+Plugin 'easymotion/vim-easymotion'
+"Plugin 'jnurmine/Zenburn'
+"Plugin 'altercation/vim-colors-solarized'
 
 " EXECUTE VUNDLE
 call vundle#end()
@@ -43,6 +46,7 @@ set textwidth=79
 set autoindent
 set fileformat=unix
 
+let mapleader = " "
 
 "navigate splitscreen :sv splitver :vs splithor
 nnoremap <C-J> <C-W><C-J>
@@ -81,3 +85,11 @@ EOF
 
 "Toggles
 nnoremap <F5> :NERDTreeToggle<CR>
+
+"ColorScheme
+"if has('gui_running')
+"    set background=dark
+"    colorscheme solarized
+"else
+"    colorscheme zenburn
+"endif
