@@ -28,6 +28,8 @@ call vundle#end()
 
 "!!BASIC USAGE!!"
 filetype plugin indent on
+"activates omni usage
+set omnifunc=syntaxcomplete#Complete
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -38,6 +40,8 @@ set fileformat=unix
 set splitbelow
 set splitright
 set encoding=utf-8
+set nu
+set relativenumbers
 
 let python_highlight_all=1
 
@@ -53,7 +57,7 @@ nnoremap <C-H> <C-W><C-H>
 
 "autopairs!
 "ino \" \""<left>
-ino ' ''<left>
+"ino ' ''<left>
 ino ( ()<left>
 ino [ []<left>
 ino { {}<left>
@@ -92,6 +96,7 @@ nnoremap <F5> :NERDTreeToggle<CR>
 " Move to line
 map <Leader>L <Plug>(easymotion-bd-jk)
 nmap <Leader>L <Plug>(easymotion-overwin-line)
+" DOESN'T WORK??
 
 
 "!!EXTRAS!!"
@@ -109,3 +114,21 @@ autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . 
 "mark unecessary whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *py,*pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+
+"!!COMMAND HELP!!"
+"setup ctags!
+
+"Vim 101 extra help:
+"ctrl+p/ctrl+n in insert -> simple word completion
+"ctrl+p -> previous, ctrl+n -> next, works for other as ups and downs as well
+"ctrl+] -> go to tag(/definition) in other file using ctags
+"ctrl+t -> go back when jumping to tags
+"ctrl+x -> set us in completion mode
+"ctrl+x + ctrl+] -> tag completion (Gooood) 
+"ctrl+x + ctrl+f -> file completion
+"ctrl+x + ctrl+p/ctr+n -> context aware word-completion
+"ctrl+x + ctrl+l -> context aware line-completion
+"m for marks, ' for jumping to it
+"ctrl+x + ctrl+o -> omni completion (the plugin will help with this)
+"
