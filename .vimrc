@@ -42,6 +42,7 @@ set splitright
 set encoding=utf-8
 set nu
 set relativenumber
+set complete+=kspell
 
 let python_highlight_all=1
 
@@ -118,6 +119,7 @@ au BufRead,BufNewFile *py,*pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "!!COMMAND HELP!!"
 "setup ctags!
+":set spell -> to activate spelling
 
 "Vim 101 extra help:
 "ctrl+p/ctrl+n in insert -> simple word completion
