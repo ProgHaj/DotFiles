@@ -41,7 +41,7 @@ set splitbelow
 set splitright
 set encoding=utf-8
 set nu
-set relativenumbers
+set relativenumber
 
 let python_highlight_all=1
 
