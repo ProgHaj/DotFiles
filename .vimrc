@@ -43,6 +43,7 @@ set encoding=utf-8
 set nu
 set relativenumber
 set complete+=kspell
+highlight LineNr ctermfg=grey
 
 let python_highlight_all=1
 
