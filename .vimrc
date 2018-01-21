@@ -61,7 +61,9 @@ nnoremap <C-H> <C-W><C-H>
 "ino \" \""<left>
 "ino ' ''<left>
 ino ( ()<left>
+ino () ()
 ino [ []<left>
+ino [] []
 ino { {}<left>
 ino {<CR> {<CR>}<ESC>O
 ino {;<CR> {<CR>};<ESC>O
