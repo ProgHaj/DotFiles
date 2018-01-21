@@ -58,7 +58,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "autopairs!
-"ino \" \""<left>
+ino " ""<left>
 "ino ' ''<left>
 ino ( ()<left>
 ino () ()
@@ -67,8 +67,8 @@ ino [] []
 ino { {}<left>
 ino {<CR> {<CR>}<ESC>O
 ino {;<CR> {<CR>};<ESC>O
-inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : ")"
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
+inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 "^- skips adding ) if typed on a ), just moves it to next.
 
 
