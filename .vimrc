@@ -17,10 +17,19 @@ Plugin 'scrooloose/syntastic'                                   "syntax checking
 Plugin 'nvie/vim-flake8'                                        "python style checker + static syntax ?
 Plugin 'kien/ctrlp.vim'                                         "fuzzy finder, usage ctrl+P
 Plugin 'scrooloose/nerdtree'                                    "nerdtree with f5
-Plugin 'Lokaltog/powerline',{'rtp':'powerline/bindings/vim/'}   "betterlooking status line
 Plugin 'easymotion/vim-easymotion'                              "jump around in file using leader+leader+s or similar
 Plugin 'rust-lang/rust.vim'                                     "rust syntax and stuff?
+Plugin 'racer-rust/vim-racer'                                   "racer for rust code completion and navigation ctrl+x + ctrl+o
 Plugin 'scrooloose/nerdcommenter'                               "comment with leader+c+leader or leader+c+c
+Plugin 'iCyMind/NeoSolarized'                                     "colorscheme mostly for neovim
+
+if has('nvim')
+    " Neovim specific commands
+else
+    " Standard vim specific commands
+    Plugin 'Lokaltog/powerline',{'rtp':'powerline/bindings/vim/'}   "betterlooking status line
+endif
+
 
 " EXECUTE VUNDLE
 call vundle#end()
@@ -44,6 +53,10 @@ set nu
 set relativenumber
 set complete+=kspell
 highlight LineNr ctermfg=grey
+
+set termguicolors
+set background=dark
+colorscheme NeoSolarized
 
 let python_highlight_all=1
 
@@ -80,14 +93,14 @@ vmap > >gv
 
 
 "python virtualenv -- why?
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+    "project_base_dir = os.environ['VIRTUAL_ENV']
+    "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    "execfile(activate_this, dict(__file__=activate_this))
+"EOF
 
 
 "!!PLUGINS!!"
@@ -107,6 +120,16 @@ nnoremap <F5> :NERDTreeToggle<CR>
 map <Leader>L <Plug>(easymotion-bd-jk)
 nmap <Leader>L <Plug>(easymotion-overwin-line)
 " DOESN'T WORK??
+
+"""Racer"""
+" Doesn't force save upon gotos
+set hidden
+let g:racer_cmd = "/home/bob/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 
 "!!EXTRAS!!"
