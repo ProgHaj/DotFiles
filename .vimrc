@@ -25,6 +25,7 @@ Plugin 'iCyMind/NeoSolarized'                                     "colorscheme m
 
 if has('nvim')
     " Neovim specific commands
+    Plugin 'Shougo/deoplete.nvim'           ", { 'do': ':UpdateRemotePlugins' } activate this vim-plug
 else
     " Standard vim specific commands
     Plugin 'Lokaltog/powerline',{'rtp':'powerline/bindings/vim/'}   "betterlooking status line
@@ -122,6 +123,7 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " DOESN'T WORK??
 
 """Racer"""
+" completion
 " Doesn't force save upon gotos
 set hidden
 let g:racer_cmd = "/home/bob/.cargo/bin/racer"
@@ -130,6 +132,12 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
+"""Deoplete"""
+" Completion (used in rust)
+if has("nvim")
+    let g:deoplete#enable_at_startup = 1
+endif
 
 
 "!!EXTRAS!!"
