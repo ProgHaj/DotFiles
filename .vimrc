@@ -139,6 +139,10 @@ if has("nvim")
     let g:deoplete#enable_at_startup = 1
 endif
 
+"""Syntastic"""
+"Run cargo check on rust saves
+autocmd FileType rust let g:syntastic_rust_checkers = ['cargo']
+
 
 "!!EXTRAS!!"
 
