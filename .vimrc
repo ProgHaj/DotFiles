@@ -156,6 +156,9 @@ au BufRead,BufNewFile *.script set syntax=lua
 "remove trailing whitespaces
 autocmd BufWritePre *.py,*.groovy,*.c,*.rs,*.go :%s/\s\+$//e
 
+"set asm filetype to nasm (assembly)
+autocmd BufRead *.asm :set filetype=nasm
+
 "update ctag file after save for rust
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
 autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
