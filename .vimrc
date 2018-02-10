@@ -92,6 +92,9 @@ inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 vmap < <gv
 vmap > >gv
 
+"turn off highlighting until next search
+nnoremap <F3> :noh<CR>
+
 
 "python virtualenv -- why?
 "py << EOF
