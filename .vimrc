@@ -79,6 +79,8 @@ ino () ()
 ino [ []<left>
 ino [] []
 ino { {}<left>
+ino [<CR> [<CR>]<ESC>O
+ino (<CR> (<CR>)<ESC>O
 ino {<CR> {<CR>}<ESC>O
 ino {;<CR> {<CR>};<ESC>O
 inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
@@ -150,6 +152,13 @@ endif
 "Run cargo check on rust saves
 autocmd FileType rust let g:syntastic_rust_checkers = ['cargo']
 
+
+"""Rust"""
+" -- Rust --
+augroup rust
+  autocmd!
+  autocmd FileType rust nnoremap <buffer> <LEADER>r :!cargo run<CR>
+augroup END
 
 "!!EXTRAS!!"
 
